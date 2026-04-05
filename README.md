@@ -64,6 +64,19 @@ Saída esperada:
 
 Se quiser fazer deploy e interagir via frontend:
 
+**Se esta for sua primeira vez, siga estes passos:**
+Antes de rodar o `solana-test-validator` você precisa criar sua carteira:
+```bash
+solana-keygen new
+```
+>Faça backup da sua seed phrase e utilize-a **exclusivamente** para desenvolvimento.
+
+Com o comando `solana address` você pode consultar seu endereço e com o comando `solana balance` pode verificar seu saldo.
+
+Caso queira ou precise de mais fundos, basta solicitar `solana airdrop 2` e pronto, você terá mais fundos para testes locais.
+
+Para mais detalhes, consulte a documentação oficial, disponível em: [Criar uma carteira](https://solana.com/pt/docs/intro/installation/solana-cli-basics#criar-uma-carteira)
+
 **Aba 1 — Validator local:**
 ```bash
 solana config set --url localhost --keypair ~/.config/solana/id.json
@@ -73,19 +86,32 @@ solana-test-validator
 **Aba 2 — Deploy:**
 ```bash
 cd counter-program
+npm install --save-dev ts-mocha
 anchor build
 anchor deploy
 ```
 
+Neste momento você terá o seu program id gerado, no console aparecerá como: `Program Id: 7JZ4LJASDF...`
+
+Tome nota, pois será necessário alterar a referência do projeto atual, configurado como `FJKTbA7i4yVJoecGh2w1nmRQgRrVQpaGa1VvBz6Ug2HP` para o seu program id.
+
+Arquivos a serem alterados:
+1. programs/counter-program/src/lib.rs
+2. app/lib/counter_program.json
+3. app/lib/useProgram.ts
+
+Feito isto, rode novamente o comando `anchor deploy` e verifique se a última saída do seu terminal é `Deploy success`.
+
 ---
 
 ## 3. Rodando o Frontend
+Dentro da raíz do projeto clonado:
 
 ```bash
-cd counter-program/app
+cd app
 
 # Copie o env e ajuste se necessário
-cp .env.local.example .env.local
+cp .env.example .env
 
 # Instale as dependências (se ainda não fez)
 npm install
