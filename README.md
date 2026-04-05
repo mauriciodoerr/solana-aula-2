@@ -64,19 +64,23 @@ Saída esperada:
 
 Se quiser fazer deploy e interagir via frontend:
 
-**Se esta for sua primeira vez, não pule esta etapa**
+<details>
 
-Antes de rodar o `solana-test-validator` você precisa criar sua carteira:
+**<summary>Se esta for sua primeira vez, siga estes passos</summary>**
+
+Para criar sua carteira:
 ```bash
 solana-keygen new
 ```
 >Faça backup da sua seed phrase e utilize-a **exclusivamente** para desenvolvimento.
 
-Com o comando `solana address` você pode consultar seu endereço e com o comando `solana balance` pode verificar seu saldo.
+Com o comando `solana address` você pode consultar endereço e com o comando `solana balance` pode verificar saldo.
 
-Caso queira ou precise de mais fundos, basta solicitar `solana airdrop 2` e pronto, você terá mais fundos para testes locais.
+Caso queira ou precise de mais fundos, basta solicitar `solana airdrop 2` e pronto, você terá mais fundos disponíveis para testes locais.
 
 Para mais detalhes, consulte a documentação oficial, disponível em: [Criar uma carteira](https://solana.com/pt/docs/intro/installation/solana-cli-basics#criar-uma-carteira)
+
+</details>
 
 **Aba 1 — Validator local:**
 ```bash
