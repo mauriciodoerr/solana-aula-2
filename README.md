@@ -66,7 +66,7 @@ Se quiser fazer deploy e interagir via frontend:
 
 <details>
 
-**<summary>Se esta for sua primeira vez, siga estes passos</summary>**
+<summary>Primeira vez com Solana CLI? Siga estes passos</summary>
 
 Para criar sua carteira:
 ```bash
