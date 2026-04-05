@@ -64,7 +64,8 @@ Saída esperada:
 
 Se quiser fazer deploy e interagir via frontend:
 
-**Se esta for sua primeira vez, siga estes passos:**
+**Se esta for sua primeira vez, não pule esta etapa**
+
 Antes de rodar o `solana-test-validator` você precisa criar sua carteira:
 ```bash
 solana-keygen new
