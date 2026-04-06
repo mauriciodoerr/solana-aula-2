@@ -101,9 +101,10 @@ Neste momento você terá o seu program id gerado, no console aparecerá como: `
 Tome nota, pois será necessário alterar a referência do projeto atual, configurado como `FJKTbA7i4yVJoecGh2w1nmRQgRrVQpaGa1VvBz6Ug2HP` para o seu program id.
 
 Arquivos a serem alterados:
-1. programs/counter-program/src/lib.rs
-2. app/lib/counter_program.json
-3. app/lib/useProgram.ts
+1. Anchor.toml
+2. programs/counter-program/src/lib.rs
+3. app/lib/counter_program.json
+4. app/lib/useProgram.ts
 
 Feito isto, rode novamente o comando `anchor deploy` e verifique se a última saída do seu terminal é `Deploy success`.
 
